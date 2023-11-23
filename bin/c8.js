@@ -39,7 +39,7 @@ async function run () {
         await outputReport(argv)
       } catch (err) {
         console.error(err.stack)
-        process.exitCode = 1
+        process.exit(1)
       }
     })
   }
@@ -47,5 +47,5 @@ async function run () {
 
 run().catch((err) => {
   console.error(err.stack)
-  process.exitCode = 1
+        process.exit(1)
 })
